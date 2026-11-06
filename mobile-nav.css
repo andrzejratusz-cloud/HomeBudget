@@ -1,0 +1,42 @@
+.mobile-menu-toggle, nav.mobile-shortcuts { display: none; }
+
+@media (max-width: 700px) {
+  aside.responsive-menu { position: relative; z-index: 2; }
+  .mobile-menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    border: 0;
+    border-radius: 10px;
+    color: #6940b6;
+    background: #f2e8ff;
+  }
+  nav.mobile-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0;
+    margin: 10px -12px 0;
+    overflow: visible;
+  }
+  .mobile-shortcuts button {
+    display: grid;
+    place-items: center;
+    min-height: 44px;
+    padding: 0;
+  }
+  .responsive-menu #section-menu { display: none; }
+  .responsive-menu.menu-open #section-menu {
+    display: grid;
+    position: absolute;
+    inset: 100% 12px auto;
+    margin: 0;
+    padding: 8px;
+    background: white;
+    border: 1px solid #eee5f3;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px #35304d26;
+  }
+  #section-menu button { min-height: 44px; font-size: 14px; }
+}
