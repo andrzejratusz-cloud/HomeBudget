@@ -1,6 +1,6 @@
 const mobileIcons = {
   dashboard: '<path d="M6 18a4 4 0 0 1-.5-8 6 6 0 0 1 11.5-1.5A4.8 4.8 0 0 1 18 18Z" fill="#d9ebff" stroke="#3974ad"/>',
-  incomes: '<path d="M6 18 18 6m-8 0h8v8" fill="none" stroke="#258253"/>',
+  incomes: '<path d="M18 6 6 18m8 0H6v-8" fill="none" stroke="#258253"/>',
   costs: '<path d="M12 3v18m5-14H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H7" fill="none" stroke="#8b5a18"/>',
   goals: '<circle cx="12" cy="12" r="9" fill="white" stroke="#c7384f"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="#c7384f"/><circle cx="12" cy="12" r="2" fill="#c7384f"/>',
   savings: '<rect x="3" y="4" width="18" height="16" rx="3" fill="#e9dffc" stroke="#644196"/><path d="M6 8v8m12-8v8M7 20v1m10-1v1" stroke="#644196"/><circle cx="12" cy="12" r="3" fill="white" stroke="#644196"/>',

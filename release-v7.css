@@ -1,0 +1,61 @@
+main > header[hidden] { display: none; }
+main { padding-top: 16px; }
+.toolbar { margin: 0 0 16px; }
+.toolbar #month { margin: 0; }
+.brand-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  padding: 0;
+}
+.forecast-chart-panel { margin-bottom: 18px; }
+.chart-controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.chart-controls label { display: inline-flex; align-items: center; gap: 6px; }
+.chart-controls input { accent-color: var(--theme-accent, #7544c5); }
+.chart-month { padding-block: 8px; border-top: 1px solid var(--theme-border, #eee3f0); }
+.chart-month h3 { margin: 4px 0 8px; font-size: 14px; }
+.chart-row {
+  display: grid;
+  grid-template-columns: minmax(80px, 1fr) minmax(32px, 4fr) minmax(75px, auto);
+  gap: 8px;
+  align-items: center;
+  margin: 7px 0;
+  font-size: 12px;
+}
+.chart-row strong { text-align: right; }
+.chart-track { background: var(--theme-soft, #f1e7f9); height: 10px; border-radius: 6px; }
+.chart-track i { display: block; height: 100%; border-radius: inherit; background: var(--series); }
+.chart-track .chart-negative { background: repeating-linear-gradient(135deg, var(--series) 0 4px, #b14450 4px 8px); }
+.reset-panel { margin-top: 22px; }
+
+[data-theme="ocean"] {
+  --theme-bg: #edf7fb; --theme-surface: #fff; --theme-text: #143448;
+  --theme-accent: #176087; --theme-soft: #dceef7; --theme-border: #c6e0ec;
+}
+[data-theme="forest"] {
+  --theme-bg: #eff6ef; --theme-surface: #fff; --theme-text: #213f32;
+  --theme-accent: #276449; --theme-soft: #deefe0; --theme-border: #cce0d0;
+}
+[data-theme="night"] {
+  color-scheme: dark;
+  --theme-bg: #141a28; --theme-surface: #222c3e; --theme-text: #f0f4ff;
+  --theme-accent: #704bbb; --theme-soft: #34405c; --theme-border: #43506a;
+}
+[data-theme]:not([data-theme="peach"]) body { background: var(--theme-bg); color: var(--theme-text); }
+[data-theme]:not([data-theme="peach"]) :is(aside, .card, .panel, dialog, #section-menu, .toolbar #month, input, select) {
+  background: var(--theme-surface); color: var(--theme-text); border-color: var(--theme-border);
+}
+[data-theme]:not([data-theme="peach"]) :is(.secondary, .mobile-menu-toggle, nav button.active, .aside-foot, .logo, .badge, .banner, .timeline-note, .pill) {
+  background: var(--theme-soft); color: var(--theme-text); border-color: var(--theme-border);
+}
+[data-theme]:not([data-theme="peach"]) :is(.primary, .card.balance, .progress span) { background: var(--theme-accent); color: white; }
+[data-theme="night"] :is(.hint, .setting, .eyebrow, nav button, .row small, .banner p, .timeline-note p, .milestone strong, .milestone small, .aside-foot p, footer) {
+  color: #d2d9e9;
+}
+[data-theme="night"] .mobile-shortcuts button svg { filter: brightness(1.65); }
+[data-theme="night"] :is(.positive, .negative) { color: #f0f4ff; }
