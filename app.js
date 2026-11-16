@@ -1,7 +1,12 @@
 const releaseHistory = `<section class="panel setting" style="margin-top:22px" aria-labelledby="release-heading">
   <h2 id="release-heading">Wydania Home Budget</h2>
-  <p>Aktualna wersja <strong>v7</strong></p>
+  <p>Aktualna wersja <strong>v12</strong></p>
   <ol reversed>
+    <li><strong>v12</strong> — wypełnienie wydatków, oszczędności nad wpływami i podziałka co 2 000 zł.</li>
+    <li><strong>v11</strong> — wykresy od bieżącego miesiąca na 12 miesięcy.</li>
+    <li><strong>v10</strong> — wykresy liniowe w prognozie i kosztach.</li>
+    <li><strong>v9</strong> — wolne środki po potwierdzonych wpłatach, wykresy i folder kopii zapasowych.</li>
+    <li><strong>v8</strong> — grupy kategorii oraz szczegółowe dochody miesięczne.</li>
     <li><strong>v7</strong> — koszty kwartalne, kategorie, wykres, motywy i reset z kopią zapasową.</li>
     <li><strong>v6</strong> — numer wersji i historia wydań w ustawieniach.</li>
     <li><strong>v5</strong> — pasek ikon i rozwijane menu na telefonie.</li>

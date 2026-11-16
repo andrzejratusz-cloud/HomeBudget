@@ -59,3 +59,40 @@ main { padding-top: 16px; }
 }
 [data-theme="night"] .mobile-shortcuts button svg { filter: brightness(1.65); }
 [data-theme="night"] :is(.positive, .negative) { color: #f0f4ff; }
+
+.category-group { margin: 12px 0; border: 1px solid var(--theme-border, #eee3f0); border-radius: 10px; }
+.category-group summary { padding: 12px; cursor: pointer; color: inherit; }
+.category-group summary strong { margin-inline-start: 8px; }
+.category-table th, .category-table td { padding: 8px 12px; text-align: left; }
+.category-table td:last-child { white-space: nowrap; }
+
+.line-chart-scroll { overflow-x: auto; margin-top: 12px; }
+.line-chart-layout { width: max-content; padding: 16px 38px 34px 112px; }
+.line-chart-plot { width: var(--plot-width); position: relative; }
+.line-chart-grid { position: absolute; inset-inline: 0; border-top: 1px solid var(--theme-border, #ddd2e4); }
+.line-chart-grid span {
+  position: absolute; right: calc(100% + 12px); transform: translateY(-50%);
+  font-size: 11px; white-space: nowrap;
+}
+.line-chart-zero { border-top: 2px solid currentColor; }
+.line-chart-segment {
+  position: absolute; height: 2px; background: var(--line-color);
+  transform-origin: left center; pointer-events: none;
+}
+.line-chart-point {
+  position: absolute; width: 28px; height: 28px; padding: 0; border: 0;
+  border-radius: 50%; background: transparent; transform: translate(-50%, -50%);
+}
+.line-chart-point::before {
+  content: ""; position: absolute; inset: 9px; border-radius: 50%;
+  background: var(--line-color); outline: 1px solid var(--theme-surface, white);
+}
+.line-chart-point:is(:focus-visible, :hover)::before { inset: 6px; }
+.line-chart-point:focus-visible { z-index: 1; }
+.line-chart-label {
+  position: absolute; top: calc(100% + 13px); transform: translateX(-50%);
+  font-size: 11px; white-space: nowrap;
+}
+.line-chart-selection { min-height: 1.5em; margin: 4px 0 12px; font-size: 13px; }
+.series-swatch { width: 10px; height: 10px; border-radius: 2px; background: var(--swatch); }
+.line-chart-fill { position: absolute; inset: 0; pointer-events: none; }
